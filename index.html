@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spacestation api</title>
+  <link rel="stylesheet" href="./assets/css/style.css"/>
+  <script defer src="./assets/js/app.js"></script>
+  <!--leaflet library-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <style>
+    body{
+      background-image: url('https://wallpaperaccess.com/full/301760.jpg');
+      background-size: cover;
+      display: flex;
+      height: 100vh;
+      font-family: sans-serif;
+      align-items: center;
+      justify-content: center;
+    }
+    #map{
+     
+      width:500px;
+      height: 300px; 
+      border: 5px  rgba(22,22,22,0.3);
+     
+    }
+    h2{
+      color: white;
+      font-weight: bold;
+      font-family: Roboto;
+    }
+    .latlong{
+      display: flex;
+      justify-content: space-between;
+      background-color:rgba(22,22,22,0.3);
+      color: white;
+      transition: linear 0.2s;
+    }
+    .latlong:hover{
+      background-color:rgba(115, 109, 115, 0.46);
+      cursor: pointer;
+      
+    }
+    .csk{
+      display: flex;
+      justify-content: space-between;
+      background-color: rgba(22,22,22,0.3);
+      color: white;
+      transition: linear 0.2s;
+    }
+    .csk:hover{
+      background-color: rgba(115, 109, 115, 0.46);
+      cursor:pointer;
+    }
+    h2{
+      background-color: rgba(22,22,22,0.3);
+      padding: 10px;
+      transition: linear 0.2s;
+    }
+    h2:hover{
+      background-color: rgba(115, 109, 115, 0.46);
+      cursor: pointer;
+    }
+    h1{
+      font-weight: bold;
+      line-height: 2rem;
+      font-size: 1rem;
+      letter-spacing: 3px;
+    }
+    h3{
+      letter-spacing: 2px;
+    }
+    @media screen and (max-width: 800px) {
+    #map {
+      width: 350px;
+      height: 250px;
+    }
+    body{
+      font-size: 13px;
+    }
+    h1{
+      font-size: 13px;
+    }
+}
+@media screen and (max-width: 400px) {
+    #map {
+      width: 200px;
+      height: 100px;
+    }
+    body{
+      font-size: 7px;
+    }
+    h1{
+      font-size: 7px;
+    }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="main">
+    <h2>SPACE STATION TRACKER API LIVE</h2>
+  <div id="map">
+  </div>
+  <div class="latlong">
+  <h1>LATITUDE:</h1><h3></h3>
+  </div>
+  <div class="csk">
+    <h1>LONGITUDE:</h1><h3 id="long"></h3>
+  </div>
+</div>
+</body>
+</html>
